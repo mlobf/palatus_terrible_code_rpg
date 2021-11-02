@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+    <head lang="pt-br">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Página criada para a descrição do cenário de campanha de Rhaokar para Pathfinder 1e">
+      <meta name="keywords" content="RPG, Cenário de Campanha, Rhaokar">
+      <meta charset="utf-8">
+    <title>    Rhaokar    </title>
+        <!-- CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<!-- JAVASCRIPT -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    {% load static %}
+    <link href="{% static 'css/bootstrap.min.css'%}" rel="stylesheet">
+    <!-- CSS -->
+<script src="{% static 'js/jquery.js'%}"></script>
+<script src="{% static 'js/bootstrap.bundle.min.js'%}"></script>
+<script type="text/JAVASCRIPT"></script>
+<link href="{% static 'css/honeycomb_e_efeitos.css'%}" rel="stylesheet">
+<style>
+.center {
+  margin: auto;
+  width: auto;
+  padding: 10px;
+}
+#close-image img {
+    display: block;
+    width: 400px;
+    height: 64px;
+}
+</style>
+</head>
+    <body>
+<div class="contem_nuvem"><div id="clouds"></div></div>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <a class="navbar-brand" href="{% url 'index'%}">Home</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown">Ancestralidades</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="{% url 'common'%}">Comuns</a>
+              <a class="dropdown-item" href="{% url 'uncommon'%}">Incomuns</a>
+              <a class="dropdown-item" href="{% url 'rare'%}">Raras</a>
+              <a class="dropdown-item" href="{% url 'universal'%}">Universais</a>
+            </div>
+          </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown">O Cenário</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="{% url 'mapa'%}">O Mapa</a>
+            <a class="dropdown-item" href="{% url 'kingdoms'%}">Os Reinos</a>
+            <a class="dropdown-item" href="{% url 'cosmos'%}">O Cosmos</a>
+            <a class="dropdown-item" href="{% url 'gods'%}">Os Deuses</a>
+          </div>
+        </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown">Diário das Campanhas</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="{% url 'campaign'%}">Log das Campanhas</a>
+              <a class="dropdown-item" href="{% url 'characters'%}">Personagens</a>
+              <a class="dropdown-item" href="{% url 'hall'%}">Salão dos Heróis</a>
+            </div>
+          </li>  
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Magia</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="{% url 'mudancas'%}">Mudanças</a>
+              <a class="dropdown-item" href="{% url 'newpowers'%}">Novos Poderes</a>
+              <a class="dropdown-item" href="{% url 'magicarquetypes'%}">Arquétipos</a>
+              <a class="dropdown-item" href="{% url 'magicitens'%}">Itens</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Alquimia</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="{% url 'alchfeats'%}">Talentos</a>
+              <a class="dropdown-item" href="{% url 'symbionts'%}">Simbiontes</a>
+              <a class="dropdown-item" href="{% url 'grafts'%}">Implantes</a>
+              <a class="dropdown-item" href="{% url 'alchitens'%}">Itens</a>
+            </div>
+          </li> 
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Tecnologia</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="{% url 'techfeats'%}">Talentos</a>
+              <a class="dropdown-item" href="{% url 'techcreations'%}">Criação de Itens</a>
+              <a class="dropdown-item" href="{% url 'techitens'%}">Itens</a>
+            </div>
+          </li>       
+      </ul>
+    </div>  
+</nav>
+      <div>
+        <div class="text-center">
+              <h1 class="titulo-principal">Rhaokar</h1>
+              <h2>É o cenário de campanha onde se passarão os jogos</h2> 
+        </div>
+        <div class="container d-flex justify-content-center">
+        <div class="row">
+        <div class="col align-self-center">
+              <ul class ="center" style="list-style-type:none;">
+                  <li><a href="{% url 'ancestries'%}"><svg class="botao"
+                    style="width: 270px; height: 70px;">
+                        <polygon
+                        points="262,40 225,64 75,64 40,40 75,20 225,20"
+                        stroke="grey"
+                        fill="black"
+                        stroke-width="5"/>
+                        <text x="150" y="45" dominant-baseline="middle" text-anchor="middle" font-size="20" fill="white" font-family="'NewRocker', Times, serif">
+                        As Ancestralidades
+                        </text>
+                    </svg></a></li>
+                  <li><a href="{% url 'cenario'%}">
+                    <svg class="botao"
+                    style="width: 270px; height: 70px;">
+                        <polygon
+                        points="262,40 225,64 75,64 40,40 75,20 225,20"
+                        stroke="grey"
+                        fill="black"
+                        stroke-width="5"/>
+                        <text x="150" y="45" dominant-baseline="middle" text-anchor="middle" font-size="25" fill="white" font-family="'NewRocker', Times, serif">
+                        O Cenário
+                        </text>
+                    </svg></a></li>
+                  <li><a href="{% url 'logs'%}">
+                    <svg class="botao"
+                    style="width: 270px; height: 70px;">
+                        <polygon
+                        points="262,40 225,64 75,64 40,40 75,20 225,20"
+                        stroke="grey"
+                        fill="black"
+                        stroke-width="5"/>
+                        <text x="150" y="45" dominant-baseline="middle" text-anchor="middle" font-size="18" fill="white" font-family="'NewRocker', Times, serif">
+                        Diário da Campanha
+                        </text>
+                    </svg>
+                    </a></li>
+                  <li><a href="{% url 'magic'%}">
+                    <svg class="botao"
+                    style="width: 270px; height: 70px;">
+                        <polygon
+                        points="262,40 225,64 75,64 40,40 75,20 225,20"
+                        stroke="grey"
+                        fill="black"
+                        stroke-width="5"/>
+                        <text x="150" y="45" dominant-baseline="middle" text-anchor="middle" font-size="25" fill="white" font-family="'NewRocker', Times, serif">
+                        A Magia
+                        </text>
+                    </svg>
+                  </a></li>
+                  <li><a href="{% url 'alchemy'%}">
+                    <svg class="botao"
+                    style="width: 270px; height: 70px;">
+                        <polygon
+                        points="262,40 225,64 75,64 40,40 75,20 225,20"
+                        stroke="grey"
+                        fill="black"
+                        stroke-width="5"/>
+                        <text x="150" y="45" dominant-baseline="middle" text-anchor="middle" font-size="25" fill="white" font-family="'NewRocker', Times, serif">
+                        A Alquimia
+                        </text>
+                    </svg>
+                  </a></li>
+                  <li><a href="{% url 'tech'%}">
+                    <svg class="botao"
+                    style="width: 270px; height: 70px;">
+                        <polygon
+                        points="262,40 225,64 75,64 40,40 75,20 225,20"
+                        stroke="grey"
+                        fill="black"
+                        stroke-width="5"/>
+                        <text x="150" y="45" dominant-baseline="middle" text-anchor="middle" font-size="25" fill="white" font-family="'NewRocker', Times, serif">
+                        A Tecnologia
+                        </text>
+                    </svg>
+                  </a></li>
+                  <li><a data-toggle="modal" data-target="#conteudoModal2">
+                    <svg class="botao"
+                    style="width: 270px; height: 70px;">
+                        <polygon
+                        points="262,40 225,64 75,64 40,40 75,20 225,20"
+                        stroke="grey"
+                        fill="black"
+                        stroke-width="5"/>
+                        <text x="150" y="45" dominant-baseline="middle" text-anchor="middle" font-size="25" fill="white" font-family="'NewRocker', Times, serif">
+                        Créditos
+                        </text>
+                    </svg>  
+                  </a></li>
+              </ul>
+        </div>
+        </div>
+        </div>
+      </div>
+<div id="conteudoModal2"
+class="modal fade">
+   <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+        <!--titulo modal centralizado-->
+        <div class="modal-header">
+            <h4>Créditos do Site</h4>
+            <button 
+            class="close" 
+            data-dismiss="modal" 
+            arial-label="fechar">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <!--conteudo modal centralizado-->
+        <div class="modal-body">
+          <ul><li><b>Cenário:</b> Paulo "Palatus" Oliveira, criação do cenário</li>
+            <li><b>Cenário:</b> Meus Jogadores, que deram muitas idéias para aplicar no cenário</li>
+            <li><b>Artes:</b> Brenno Progetti, que é o responsável por fazer todos os icones e sprites em pixelart</li>
+            <li><b>Apoio Tecnico:</b> Douglas "Doug" dos Anjos, sem o qual o mapa não ia funcionar nunca e ainda ajuda com toda a parte mais técnica do site quando algo dá errado.</li>
+          </ul>
+       </div>
+        <!--rodapé do modal centralizado-->
+        <div class="modal-footer">
+            <button 
+            class="btn btn-secondary" 
+            data-dismiss="modal">
+            Fechar
+        </button>
+        </div>
+    </div>
+   </div> 
+</div>  
+<div class="contem_grama"><div id="grass"></div></div>
+</body>
+</html>
